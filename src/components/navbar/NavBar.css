@@ -1,0 +1,16 @@
+.navBar{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 40px;
+    background-color: fuchsia;
+    position:fixed;
+    left: 0;
+    top: 0;
+}
+.navbar a{
+    font-size: 20px;
+    color: bisque;
+    font-weight: 600;
+}

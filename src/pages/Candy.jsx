@@ -1,10 +1,9 @@
 import React from 'react';
+import CandyIndex from '../components/candyIndex/CandyIndex';
 
 function Candy() {
     return (
-        <div>
-            <h1>Candy Page</h1>
-        </div>
+        <CandyIndex/>
     );
 }
 

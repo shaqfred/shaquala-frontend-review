@@ -6,6 +6,7 @@ import Error from "../../pages/Error.jsx"
 import Candy from "../../pages/Candy.jsx"
 import About from "../../pages/About.jsx"
 import Edit from "../../pages/Edit.jsx"
+
             
 import {Navigate} from "react-router-dom"
 
@@ -22,6 +23,7 @@ export default function RouteComponent(){
             <Route path="/candy/about" element={<About/>}/>
             <Route path="/candy/not-found" element={<Error/>}/>
             <Route path="*" element={<Navigate to ="/candy/not-found"/>}/>
+            <Route path="/candy/scrap" element={<Navigate to ="/candy/:id/edit"/>}/>
 
 
 

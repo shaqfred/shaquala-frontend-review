@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Form from '../components/newEditForm/Form';
 
 function Edit() {
     return (
         <div>
-            <h1>Edit Page</h1>
+          <Form/>
         </div>
     );
 }

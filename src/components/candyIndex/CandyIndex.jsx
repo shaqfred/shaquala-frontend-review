@@ -18,16 +18,26 @@ export default function CandyIndex() {
 getAllCandy()
   },[])
     return (
-        <div>
+        <div className='CandyIndex gridCenter'>
+          <h2>Browse Candy</h2>
           {
             allCandy.map((candyObj)=>{
-              return <div>
-                <span>{candyObj.name}</span>
+              
+              return <div className='CandyIndex_candyCard gridCenter'>
+                
+                <h3>{candyObj.name}</h3>
+              <div>
                 <span>{candyObj.type}</span>
+                <span>{candyObj.cost}</span>
+                <span>{candyObj.isFavorite ? "yes": "no"} </span>
               </div>
+            
+     
+        </div>
             })
           }
-        </div>
-    );
-}
+          </div>
+    
 
+            )}
+          

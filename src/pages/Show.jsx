@@ -1,10 +1,11 @@
 import React from 'react';
+import CandyShow from "../components/show/CandyShow.jsx"
 
 
 function Show() {
     return (
         <div>
-          <h1>Show Page</h1>  
+          <CandyShow/> 
         </div>
     );
 }

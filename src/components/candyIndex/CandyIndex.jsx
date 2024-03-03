@@ -3,6 +3,7 @@ import {useEffect, useState} from "react"
 import axios from 'axios';
 
 
+
 const API = import.meta.env.VITE_APP_API_URL
 
 export default function CandyIndex() {
@@ -23,7 +24,9 @@ getAllCandy()
           {
             allCandy.map((candyObj)=>{
               
-              return <div className='CandyIndex_candyCard gridCenter'>
+              return <div className='card' >
+                
+
                 
                 <h3>{candyObj.name}</h3>
               <div>
@@ -31,13 +34,16 @@ getAllCandy()
                 <span>{candyObj.cost}</span>
                 <span>{candyObj.isFavorite ? "yes": "no"} </span>
               </div>
-            
+          
      
         </div>
-            })
-          }
-          </div>
-    
-
-            )}
+            
+           
           
+        
+    }
+            
+            )  
+  }
+            </div>
+    )}

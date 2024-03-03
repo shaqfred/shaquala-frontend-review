@@ -1,17 +1,28 @@
+
 .navBar{
-    width: 100%;
+    text-align: center;
+    background-color: #FF9BD2;
     display: flex;
-    justify-content:space-evenly;
+    flex-direction: column;
     align-items: center;
-    height: 40px;
-    background-color: fuchsia;
-    position:fixed;
-    left: 0;
-    top: 0;
+    
 }
-.navbar a{
-    font-size: 20px;
-    color: bisque;
-    font-weight: 600;
+.navBar div{
+    width:fit-content;
 }
+.nav-links{
+    list-style: none;
+   color: blueviolet;
+    text-decoration: none;
+}
+.nav-links:hover{
+    color: #ffd700;
+}
+.candyImg{
+    height: 100px;
+    width: 200px; 
+    
+}
+
+
 

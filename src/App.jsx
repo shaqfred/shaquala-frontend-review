@@ -2,7 +2,7 @@ import RouteComponent from './components/routes/RouteComponent.jsx'
 import NavBar from "./components/navbar/NavBar.jsx"
 import './App.css'
 
-function App() {
+function App() { 
 
   return (
 
@@ -12,8 +12,8 @@ function App() {
        
       </div>
       
-  
-  )
-  }
 
+  )
+
+  }
 export default App

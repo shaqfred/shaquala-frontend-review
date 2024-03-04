@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react"
 import axios from 'axios';
-import './CandyShow.css'
+import "./CandyShow.css"
 
 
 const API = import.meta.env.VITE_APP_API_URL
@@ -37,12 +37,12 @@ export default function CandyShow(){
             <span>{candyDetails.cost}</span>
             <span>{candyDetails.isFavorite ? "yes" : "no"}</span>
       
-        <aside className='candyShow_buttons'>
+        <span className='candyShow_buttons'>
             <Link to={`/candy/${id}/edit`}>Edit</Link>
             <button
-            onClick={() => handleDelete}>
+            onClick={() => handleDelete()}>
                 Delete</button>
-        </aside>
+        </span>
         </>
     );
 }

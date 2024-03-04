@@ -1,17 +1,24 @@
-body{
-    
-        /* display: flex;
+.App{
+/*     
+        display: flex;
         flex-direction: row;
         text-align: right;
         padding-right: 5px;
-        height: fit-content;
-        font-family: Arial, Helvetica, sans-serif;
+        height: fit-content; */
+      
+
+
+
+font-family: Arial, Helvetica, sans-serif;
     background:linear-gradient(45deg, #ff8080, #ffd700);
     margin: 40px;
     padding:40px;
+   
+
+
     justify-content: center;
     align-items: center;
-    height: 100vh; */
+    height: 100vh;
 }
 
 h1{

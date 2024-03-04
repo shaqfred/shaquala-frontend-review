@@ -1,0 +1,14 @@
+.form{
+    
+margin: 10px;
+background-color: rgb(241, 191, 126);
+border-radius: 10px;
+box-shadow: 0 10px 15px rgb(7, 3, 3);
+overflow: hidden;;
+/* transition:0.1s ease ; */
+
+}
+.form label{
+    background:linear-gradient(45deg, #ff8080, #ffd700);
+    font-size: 20px;
+}

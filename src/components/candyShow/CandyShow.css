@@ -1,0 +1,23 @@
+.CandyShow{
+    border: 2px solid darkgray;
+        padding: 20px;
+        border-radius: 20px;
+        row-gap: 20px;
+        background-color: blue;
+}
+.CandyShow h2 ,h3{
+font-size: 30px;
+color: blueviolet;
+}
+.CandyShow span{
+    font-size: 25px;
+    color: teal;
+}
+.CandyShow_buttons{
+height: 50px;
+width:200px;
+margin-right: 20px;
+background-color: darkgrey;
+font-size: 20px;
+
+}

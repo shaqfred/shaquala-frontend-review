@@ -1,28 +1,20 @@
 .CandyIndex{
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-transform: uppercase;
     height: 40px;
 }
-.red{
-    color:red;
-}
-.green{
-    color: green;
-}
-.container{
-    display: flex;
-    flex-wrap: wrap;
-}
+
+
 .card{
-    width: calc(25%-20px);
+    width: calc(25%-10px);
 
 margin: 10px;
-background-color: #ffffff;
+background-color: rgb(241, 191, 126);
 border-radius: 10px;
-box-shadow: 0 0 10px rgba(0,0,0.1);
+box-shadow: 0 10px 15px rgb(7, 3, 3);
 overflow: hidden;
-transition:0.3s ease ;
+transition:0.1s ease ;
 }
 .card:hover{
     transform:(-5px) ;

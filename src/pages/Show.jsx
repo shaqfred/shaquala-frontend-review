@@ -1,5 +1,5 @@
 import React from 'react';
-import CandyShow from "../components/show/CandyShow.jsx"
+import CandyShow from "../components/candyShow/CandyShow.jsx"
 
 
 function Show() {

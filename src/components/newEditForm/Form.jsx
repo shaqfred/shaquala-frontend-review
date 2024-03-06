@@ -20,7 +20,7 @@ function Form() {
 function submitNewCandy(event){
     event.preventDefault()
 
-axios.post(`${API}/candy`,{...form, name: (form.name)})
+axios.post(`${API}/candy`,form)
 .then((res) => navigate(`/candy/${res.data.id}`)
 .catch((err)=>console.log(err))
 )}
@@ -29,7 +29,7 @@ function submitNewEditForm (event){
     event.preventDefault()
 
     axios.put(`${API}/candy/${id}`,{
-        ...form,
+        form,
         name: (form.name)
 })
     .then(res => navigate(`/candy/${id}`))
@@ -109,7 +109,7 @@ function submitNewEditForm (event){
     id= "isFavorite"
     type="checkbox"
     value={form.isFavorite}
-    required
+   
     checked={form.isFavorite}
     onChange={(e)=>{handleCheckbox(e)}}/>
     </label>

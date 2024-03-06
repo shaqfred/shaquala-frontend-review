@@ -2,6 +2,8 @@ import React from 'react';
 import {useEffect, useState} from "react"
 import axios from 'axios';
 import './CandyIndex.css'
+ import { Link } from 'react-router-dom';
+
 
 
 
@@ -17,34 +19,28 @@ export default function CandyIndex() {
    .catch(error=> console.log(error))
   }
   useEffect(()=>{
-getAllCandy()
+    getAllCandy()
   },[])
+  console.log(allCandy)
     return (
         <div className='CandyIndex gridCenter'>
           <h2>Browse Candy</h2>
           {
             allCandy.map((candyObj)=>{
-              
-              return <div className='card' >
-                
-
-                
-                <h3>{candyObj.name}</h3>
-              <div>
-                <span>{candyObj.type}</span>
-                <span>{candyObj.cost}</span>
-                <span>{candyObj.isFavorite ? "yes": "no"} </span>
-              </div>
-          
-     
+              return (
+                <Link to={`/Candy/${candyObj.id}`}>
+                  <div className='card' >
+                    <h3>{candyObj.name}</h3>
+                    <div>
+                      <span>{candyObj.type}</span>
+                      <span>{candyObj.cost}</span>
+                      <span>{candyObj.isFavorite ? "yes": "no"} </span>
+                    </div>
+                  </div>
+                </Link>
+              )   
+            })  
+          }
         </div>
-            
-           
-          
-        
-    }
-            
-            )  
-  }
-            </div>
-    )}
+    )
+}

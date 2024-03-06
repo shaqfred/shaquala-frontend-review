@@ -31,7 +31,7 @@ export default function CandyShow(){
 
    
     return (
-       <>
+       <div className='candyShow'>
             <h2>{candyDetails.name}</h2>
             <span>{candyDetails.type}</span>
             <span>{candyDetails.cost}</span>
@@ -43,7 +43,7 @@ export default function CandyShow(){
             onClick={() => handleDelete()}>
                 Delete</button>
         </span>
-        </>
+        </div>
     );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, } from 'react';
 import "./Form.css"
 import { useNavigate, useParams } from 'react-router-dom';
+import axios from "axios"
 
 
 const API = import.meta.env.VITE_APP_API_URL;
@@ -17,9 +18,9 @@ function Form() {
         const {id} = useParams()
 
 function submitNewCandy(event){
-    event.prevent.Default()
+    event.preventDefault()
 
-axios.post(`${API}/candy`,{...form, name: text(form.name)})
+axios.post(`${API}/candy`,{...form, name: (form.name)})
 .then((res) => navigate(`/candy/${res.data.id}`)
 .catch((err)=>console.log(err))
 )}
@@ -29,7 +30,7 @@ function submitNewEditForm (event){
 
     axios.put(`${API}/candy/${id}`,{
         ...form,
-        name:text (form.name)
+        name: (form.name)
 })
     .then(res => navigate(`/candy/${id}`))
     .catch(err => console.log(err))
@@ -40,7 +41,7 @@ function submitNewEditForm (event){
            
         const id = event.target.id
         const value = event.target.value  
-        // setForm({...form,[id]:value})
+        
         setForm((currentState)=>{
             return{
                 ...currentState,
@@ -53,7 +54,12 @@ function submitNewEditForm (event){
           
             
         }
+       function handleCheckbox(event){
+        const id = event.target.id
+        const checked = event.target.checked
 
+        setForm({...form,[id]:checked})
+       } 
 
     return (
        <>
@@ -66,40 +72,52 @@ function submitNewEditForm (event){
                 
 {/* {*title} */}
 <label htmlFor='name'>
+    
     <input
     id= "name"
     type="text"
     value={form.name}
+    placeholder='Name'
     required
     onChange={(e)=>{handleTextInput(e)}}/>
-</label>
+    </label>
+
 <label htmlFor='type'>
+   
     <input
     id= "type"
     type="text"
     value={form.type}
+    placeholder='Type'
     required
     onChange={(e)=>{handleTextInput(e)}}/>
     </label>
 <label htmlFor='cost'>
+    
     <input
     id= "cost"
     type="number"
     value={form.cost}
+    placeholder='Cost'
     required
     onChange={(e)=>{handleTextInput(e)}}/>
     </label>
-    <label htmlFor='isFavorite'>
+    
+<label htmlFor='isFavorite'>
+    
     <input
-    id= "text"
-    type="boolean"
+    id= "isFavorite"
+    type="checkbox"
     value={form.isFavorite}
     required
-    onChange={(e)=>{handleTextInput(e)}}/>
+    checked={form.isFavorite}
+    onChange={(e)=>{handleCheckbox(e)}}/>
     </label>
-    <input className='formSubmitButton'
+ 
+   <input className='formSubmitButton'
+
     type='submit'
-    value="Add A Candy"/>
+    value={id? "Edit A Candy": "Add A Candy"}/>
             </form> 
     
     </>

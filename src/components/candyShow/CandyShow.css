@@ -1,23 +1,24 @@
-.CandyShow{
+.candyShow{
     border: 2px solid darkgray;
         padding: 20px;
         border-radius: 20px;
         row-gap: 20px;
-        background-color: blue;
+        background-color: rgb(123, 144, 206);
 }
-.CandyShow h2 ,h3{
+.candyShow h2 ,h3{
 font-size: 30px;
-color: blueviolet;
+color: teal;
 }
-.CandyShow span{
+.candyShow span{
     font-size: 25px;
-    color: teal;
+    color: rgb(128, 0, 68);
 }
-.CandyShow_buttons{
+.candyShow_buttons{
 height: 50px;
 width:200px;
 margin-right: 20px;
-background-color: darkgrey;
+background-color: rgb(164, 134, 134);
 font-size: 20px;
+box-shadow: 1px;
 
 }

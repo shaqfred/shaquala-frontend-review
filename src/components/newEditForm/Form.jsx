@@ -19,7 +19,7 @@ function Form() {
 
 function submitNewCandy(event){
     event.preventDefault()
-
+console.log(form)
 axios.post(`${API}/candy`,form)
 .then((res) => navigate(`/candy/${res.data.id}`)
 .catch((err)=>console.log(err))
@@ -28,9 +28,9 @@ axios.post(`${API}/candy`,form)
 function submitNewEditForm (event){
     event.preventDefault()
 
-    axios.put(`${API}/candy/${id}`,{
+    axios.put(`${API}/candy/${id}`,
         form
-      })
+      )
     .then(res => navigate(`/candy/${id}`))
     .catch(err => console.log(err))
 }
@@ -51,7 +51,7 @@ function submitNewEditForm (event){
         const id = event.target.id
         const checked = event.target.checked
 
-        setForm({form,[id]:checked})
+        setForm({...form,[id]:checked})
        } 
 
      

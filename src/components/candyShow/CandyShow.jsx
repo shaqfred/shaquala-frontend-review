@@ -24,7 +24,7 @@ export default function CandyShow(){
     useEffect(()=>{
 
         axios.get(`${API}/candy/${id}`)
-        .then(res => setCandyDetails(res.data))
+        .then(res => setCandyDetails(res.data.id))
         .catch(err => console.log(err))
         
     },[id])

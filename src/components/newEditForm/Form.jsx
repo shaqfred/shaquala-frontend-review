@@ -30,14 +30,11 @@ function submitNewEditForm (event){
 
     axios.put(`${API}/candy/${id}`,{
         form
-      
-})
+      })
     .then(res => navigate(`/candy/${id}`))
     .catch(err => console.log(err))
 }
-
-
-        function handleTextInput(event){
+ function handleTextInput(event){
            
         const id = event.target.id
         const value = event.target.value  
@@ -48,24 +45,39 @@ function submitNewEditForm (event){
                 [id]:value
             }
 
-               
-            
-        })
-         
-        
-            
-        }
+                })
+         }
        function handleCheckbox(event){
         const id = event.target.id
         const checked = event.target.checked
 
-        setForm({...form,[id]:checked})
+        setForm({form,[id]:checked})
        } 
-useEffect(()=>{
 
+     
+
+    // const EditForm = ({isEditing, EditId})=> {
+    //     const [isLoading, setIsLoading]= useState (false)
+    //     const [edit, setEdit]= useState = ({})
+    // }
+    
+   
+
+  
+useEffect(()=>{
+//    if(isEditing === "") 
+//    setForm((currentState))
 },[id])
+
+
+    
+
+
+
+
+
     return (
-       <>
+       
             <form className='form' 
             onSubmit={(e)=>{
                 id ? submitNewEditForm(e):
@@ -121,9 +133,12 @@ useEffect(()=>{
 
     type='submit'
     value={id? "Edit A Candy": "Add A Candy"}/>
-            </form> 
-    
-    </>
-    )}
-        
+             
+ 
+
+ </form>
+ 
+  
+    )
+        }
 export default Form;

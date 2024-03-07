@@ -21,7 +21,7 @@ export default function CandyIndex() {
   useEffect(()=>{
     getAllCandy()
   },[])
-  console.log(allCandy)
+  //  console.log(allCandy)
     return (
         <div className='CandyIndex gridCenter'>
           <h2>Browse Candy</h2>

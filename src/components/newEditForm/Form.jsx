@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState, } from 'react';
 import "./Form.css"
 import { useNavigate, useParams } from 'react-router-dom';
@@ -29,8 +29,8 @@ function submitNewEditForm (event){
     event.preventDefault()
 
     axios.put(`${API}/candy/${id}`,{
-        form,
-        name: (form.name)
+        form
+      
 })
     .then(res => navigate(`/candy/${id}`))
     .catch(err => console.log(err))
@@ -51,7 +51,8 @@ function submitNewEditForm (event){
                
             
         })
-          
+         
+        
             
         }
        function handleCheckbox(event){
@@ -60,7 +61,9 @@ function submitNewEditForm (event){
 
         setForm({...form,[id]:checked})
        } 
+useEffect(()=>{
 
+},[id])
     return (
        <>
             <form className='form' 

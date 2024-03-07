@@ -13,7 +13,7 @@ export default function CandyShow(){
     const[candyDetails, setCandyDetails] = useState({})
 
     const {id} = useParams()
-    const navigate=useNavigate
+    const navigate=useNavigate()
     
     function handleDelete (){
         axios.delete(`${API}/candy/${id}`)
@@ -24,7 +24,7 @@ export default function CandyShow(){
     useEffect(()=>{
 
         axios.get(`${API}/candy/${id}`)
-        .then(res => setCandyDetails(res.data.id))
+        .then(res => setCandyDetails(res.data))
         .catch(err => console.log(err))
         
     },[id])
